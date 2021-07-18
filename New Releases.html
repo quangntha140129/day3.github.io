@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"> </script>
+
+  <script type="text/javascript">
+    $(window).on('scroll',
+      function () {
+        if ($(window).scrollTop()) { $('nav').addClass('black'); }
+        else { $('nav').removeClass('black'); }
+      })
+  </script>
+
+  <title>Jordan New Releases. Nike.com</title>
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0px;
+      z-index: 10000;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 15px 0 15px 0;
+      background: white;
+    }
+
+    nav ul {
+      list-style: none;
+      overflow: hidden;
+      padding: 0;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 0px;
+      transition: 0.5s;
+    }
+
+    nav ul li {
+      display: inline-block;
+      padding: 8px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 10pt;
+      font-weight: bolder;
+      color: #151516;
+    }
+
+    nav ul li a:hover {
+      text-decoration: none;
+      color: #151516;
+    }
+
+    .underline:after {
+      display: block;
+      content: '';
+      background-color: #151516;
+      height: 2px;
+      width: 0;
+      left: 0;
+      margin-bottom: 0px;
+      transition: 0.3s;
+    }
+
+    .underline:hover:after {
+      width: 100%;
+    }
+
+    nav .logo img {
+      display: block;
+      position: relative;
+      margin-left: 48.5%;
+      height: 65px;
+      transition: 0.3s;
+    }
+
+    nav.black .logo img {
+      display: block;
+      position: relative;
+      margin-left: 20px;
+      height: 40px;
+      z-index: 1000;
+      transition: 0.3s;
+    }
+
+    nav.black ul {
+      list-style: none;
+      overflow: hidden;
+      padding: 0;
+      text-align: center;
+      margin-top: -40px;
+      margin-bottom: 0px;
+      transition: 0.5s;
+    }
+
+    .form-inline {
+      position: absolute;
+      right: 16px;
+    }
+
+    .carousel-inner img {
+      /* background-size: cover; */
+      width: 100%;
+      max-height: 100vh;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .Big-heading {
+      text-transform: uppercase;
+      font-weight: 1000;
+      font-size: 40pt;
+      letter-spacing: -3pt;
+      /* margin-bottom: 10px; */
+    }
+
+    .h5,
+    h5 {
+      color: #151516;
+      font-size: 12pt;
+      font-weight: 500;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      right: 15%;
+      left: 15%;
+      bottom: 20px;
+      height: 200px;
+      z-index: 10;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      top: clamp(6rem, 13vw, 13rem);
+      /* transform: translateY(-65%); */
+      color: #151516;
+      text-align: center;
+    }
+
+    .btn-success {
+      color: #151516;
+      background-color: rgba(255, 255, 255, 0);
+      border-color: #151516;
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      height: calc(1.5em + .75rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #bbb6b6;
+      background-color: #f3f3f3;
+      background-clip: padding-box;
+      border: 1px solid #c6c8ca;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    .container {
+      padding: 0 0 0 0;
+      margin: 0 auto 0 auto;
+      max-width: 100%;
+    }
+
+    .container::after,
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .row {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .col {
+      padding: 0 0 0 0;
+      margin-left: 8px;
+      margin-right: 8px;
+      flex: 25%;
+      -ms-flex: 25%;
+      max-width: 100%;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 1400px) {
+      .col {
+        -ms-flex: 45%;
+        flex: 45%;
+        max-width: 50%;
+      }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+      .col {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .Title {
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 1000;
+      font-size: 32pt;
+      margin-top: 150px;
+      color: #151516;
+    }
+
+    .Small-title {
+      /* position: absolute; */
+      width: 100%;
+      font-weight: 700;
+      font-size: 18pt;
+      /* letter-spacing: 2pt; */
+      text-transform: uppercase;
+      margin-top: -5px;
+      margin-bottom: 5px;
+      color: #151516;
+    }
+
+    .tagline {
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 10pt;
+      letter-spacing: 2pt;
+      margin-top: -3px;
+      color: #a5a8aa;
+    }
+
+    .price {
+      /* text-align: right; */
+      font-weight: 700;
+      font-size: 14pt;
+      margin-bottom: 75px;
+    }
+
+    .status {
+      width: 100%;
+      font-size: 12pt;
+      font-weight: 500;
+      color: #fa533d;
+    }
+
+    .ncolor {
+      width: 100%;
+      font-size: 12pt;
+      font-weight: normal;
+      color: #a5a8aa;
+      margin-bottom: 10px;
+    }
+
+    .Image-list img {
+      width: 100%;
+      margin-bottom: 25px;
+      align-items: center;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .Text-block {
+      display: block;
+      width: 100%;
+      font-size: 10pt;
+      color: #626466;
+    }
+
+    .button {
+      border-width: 1pt;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      cursor: pointer;
+      color: #151516;
+      background-color: rgb(255, 255, 255);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2pt;
+      font-size: 10pt;
+      font-weight: 500;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: rgb(26, 27, 27);
+      color: white;
+    }
+
+    .h2 {
+      font-size: 24pt;
+      font-weight: 400;
+      color: #151516;
+    }
+
+    /* Footer */
+
+    .footer {
+      box-sizing: border-box;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #151516;
+      color: white;
+      /* text-align: center; */
+      margin-top: 200px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .footer ul {
+      margin-top: 30px;
+      list-style: none;
+      padding: 0px;
+    }
+
+    .footer-col {
+      width: 15%;
+    }
+
+    footer-h {
+      text-transform: uppercase;
+      font-size: 10pt;
+      font-weight: 700;
+      position: relative;
+    }
+
+    footer-h::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: white;
+      height: 2px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 2px;
+    }
+
+    .footer-col ul li {
+      height: 25px;
+    }
+
+    .footer-col ul li a {
+      display: block;
+      font-size: 10pt;
+      color: #a5a8aa;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-col ul li a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+
+    /* Social */
+
+    .footer-col .social-link {
+      margin-left: -5px;
+    }
+
+    .footer-col .social-link a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      color: #151516;
+      background-color: #a5a8aa;
+      margin: 30px 5px 0 5px;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    .footer-col .social-link a:hover {
+      background-color: white;
+    }
+
+    .icon-bar a:hover {
+      background-color: #151516;
+    }
+
+    .content {
+      margin-left: 75px;
+      font-size: 30px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Load font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Navigation Bar -->
+  <nav>
+
+    <!-- Brand/logo -->
+    <a class="logo" href="index.html">
+      <img
+        src="https://www.nike.com/assets/experience/ciclp/landing-pages/static/v2/23-f4b9158ea25/static/icons/jordan.svg">
+    </a>
+
+    <!-- Links -->
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="New Releases.html" class="underline">New Releases</a>
+        </li>
+        <li>
+          <a href="Jordan Sport.html" class="underline">Jordan Sport</a>
+        </li>
+        <li>
+          <a href="Men.html" class="underline">Men</a>
+        </li>
+        <li>
+          <a href="Women.html" class="underline">Women</a>
+        </li>
+        <li>
+          <a href="Kids.html" class="underline">Kids</a>
+        </li>
+        <li>
+          <a href="About us.html" class="underline">About us</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Input search form -->
+    <!-- <form class="form-inline" action="/action_page.php">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-success" type="submit">Search</button>
+      </form> -->
+
+  </nav>
+
+  <!-- About us -->
+
+  <div style="margin-top: 200px; margin-bottom: 50px;">
+    <div class="Title">
+      new jordan
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row" style="width: 75%;">
+      <div class="col">
+        <div>
+          <div class="Image-list">
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9313fb42-b9fb-4a13-bd94-46137fd19c12/air-jordan-1-mid-se-shoe-zgPD6z.png">
+          </div>
+          <div class="status">
+            Just in
+          </div>
+          <div class="Small-title">
+            Air Jordan 1 Mid SE
+          </div>
+          <div class="tagline">
+            Shoe
+          </div>
+          <div class="ncolor">
+            1 color
+          </div>
+          <div class="price">
+            3,519,000 VND
+          </div>
+        </div>
+        <div>
+          <div class="Image-list">
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8fcb7c6c-02f7-445c-8045-4d0dbbea11e0/jordan-1-low-alt-younger-shoe-NpXDNW.png">
+          </div>
+          <div class="status">
+            Just in
+          </div>
+          <div class="Small-title">
+            Jordan 1 Low Alt
+          </div>
+          <div class="tagline">
+            Younger Kids' Shoe
+          </div>
+          <div class="ncolor">
+            1 color
+          </div>
+          <div class="price">
+            1,529,000 VND
+          </div>
+        </div>
+        <div>
+          <div class="Image-list">
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fb3954e7-af85-490f-8476-91a574ef5ab3/jordan-break-slide-QmwKlG.png">
+          </div>
+          <div class="status">
+            Just in
+          </div>
+          <div class="Small-title">
+            Jordan Break
+          </div>
+          <div class="tagline">
+            slide
+          </div>
+          <div class="ncolor">
+            1 color
+          </div>
+          <div class="price">
+            889,000 VND
+          </div>
+        </div>
+        <div>
+          <div class="Image-list">
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4ed1e74f-4aac-43bf-b00a-f3062fa0bd0a/jordan-heatwave-printed-crop-top-zZD9kP.png">
+          </div>
+          <div class="status">
+            Just in
+          </div>
+          <div class="Small-title">
+            Jordan Heatwave
+          </div>
+          <div class="tagline">
+            Women's Printed Crop Top
+          </div>
+          <div class="ncolor">
+            1 color
+          </div>
+          <div class="price">
+            1,379,000 VND
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+          <div class="Image-list">
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/353af8eb-1e41-4a48-aa1d-8cd78f554a09/air-jordan-1-low-se-shoe-nvDMPd.png">
+          </div>
+          <div class="status">
+            Just in
+          </div>
+          <div class="Small-title">
+            Air Jordan 1 Low SE
+          </div>
+          <div class="tagline">
+            Shoe
+          </div>
+          <div class="ncolor">
+            1 color
+          </div>
+          <div class="price">
+            3,239,000 VND
+          </div>
+        </div>
+        <div>
+          <div class="Image-list">
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/49730b06-eee6-4bce-a55b-cc74bc6069d4/jordan-ma2-shoe-gr2pR5.png">
+          </div>
+          <div class="status">
+            Just in
+          </div>
+          <div class="Small-title">
+            Jordan MA2
+          </div>
+          <div class="tagline">
+            women's Shoe
+          </div>
+          <div class="ncolor">
+            1 color
+          </div>
+          <div class="price">
+            3,669,000 VND
+          </div>
+        </div>
+        <div>
+          <div class="Image-list">
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/251cc63f-7822-45ed-b305-816392fa7beb/jordan-jumpman-heritage86-washed-cap-f59xF8.png">
+          </div>
+          <div class="status">
+            Just in
+          </div>
+          <div class="Small-title">
+            Jordan Jumpman Heritage86
+          </div>
+          <div class="tagline">
+            washed cap
+          </div>
+          <div class="ncolor">
+            1 color
+          </div>
+          <div class="price">
+            559,000 VND
+          </div>
+        </div>
+        <div>
+          <div class="Image-list">
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/715bdd38-902a-426c-813a-9c7252c9a515/jordan-adg-3-golf-shoe-mJRNPg.png">
+          </div>
+          <div class="Small-title">
+            Jordan ADG 3
+          </div>
+          <div class="tagline">
+            Men's Golf Shoe
+          </div>
+          <div class="ncolor">
+            1 color
+          </div>
+          <div class="price">
+            4,109,000 VND
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+          <div class="Image-list">
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/91666a63-39db-4e0d-a237-0c2baf572a27/air-jordan-1-mid-shoe-BpARGV.png">
+          </div>
+          <div class="status">
+            Just in
+          </div>
+          <div class="Small-title">
+            Jordan MA2
+          </div>
+          <div class="tagline">
+            Shoe
+          </div>
+          <div class="ncolor">
+            1 color
+          </div>
+          <div class="price">
+            3,239,000 VND
+          </div>
+        </div>
+        <div>
+          <div class="Image-list">
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/78038d95-672c-41e8-8dff-1d00220a5d86/jordan-jumpman-washed-bucket-hat-kblNWN.png">
+          </div>
+          <div class="status">
+            Just in
+          </div>
+          <div class="Small-title">
+            Jordan Jumpman
+          </div>
+          <div class="tagline">
+            washed bucket hat
+          </div>
+          <div class="ncolor">
+            1 color
+          </div>
+          <div class="price">
+            709,000 VND
+          </div>
+        </div>
+        <div>
+          <div class="Image-list">
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4d43011d-2cc0-408e-93ec-008147ef3573/jordan-ma2-shoe-qw1Z6m.png">
+          </div>
+          <div class="Small-title">
+            Jordan MA2
+          </div>
+          <div class="tagline">
+            shoe
+          </div>
+          <div class="ncolor">
+            2 colors
+          </div>
+          <div class="price">
+            3,669,000 VND
+          </div>
+        </div>
+        <div>
+          <div class="Image-list" style="padding-top: 24px !important;">
+            <img
+              src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4286450e-96a5-4780-9257-e4e4b084ffba/jordan-one-take-ii-pf-basketball-shoe-m666jq.png">
+          </div>
+          <div class="Small-title">
+            Jordan One Take II PF
+          </div>
+          <div class="tagline">
+            basketball shoe
+          </div>
+          <div class="ncolor">
+            1 color
+          </div>
+          <div class="price">
+            2,929,000 VND
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+
+  <div class="footer">
+    <div class="container" style="padding: 0 10% 0 10%; margin: 0 0 0 0; max-width: 100%;">
+      <div class="row" style="margin-left: 0px; margin-right: 0px;">
+        <div class="footer-col">
+          <footer-h>
+            find a store
+          </footer-h>
+          <br>
+          <br>
+          <footer-h>
+            become a member
+          </footer-h>
+          <br>
+          <br>
+          <footer-h>
+            sign up for email
+          </footer-h>
+          <br>
+          <br>
+          <footer-h>
+            send us feedback
+          </footer-h>
+          <br>
+        </div>
+
+        <div class="footer-col">
+          <footer-h>
+            get help
+          </footer-h>
+          <ul>
+            <li> <a href="">Order Status</a> </li>
+            <li> <a href="">Delivery</a> </li>
+            <li> <a href="">Returns</a> </li>
+            <li> <a href="">Payment Options</a> </li>
+            <li> <a href="">Contact Us</a> </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <footer-h>
+            about nike
+          </footer-h>
+          <ul>
+            <li> <a href="">News</a> </li>
+            <li> <a href="">Careers</a> </li>
+            <li> <a href="">Investors</a> </li>
+            <li> <a href="">Sustainability</a> </li>
+          </ul>
+        </div>
+
+        <div class="footer-col" style="width: 30%; margin-left: auto;">
+          <footer-h>
+            Follow us
+          </footer-h>
+          <div class="social-link">
+            <a href="https://www.facebook.com/nike" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/nike" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="mailto:info@nike.com" target="_blank"><i class="fa fa-google"></i></a>
+            <a href="https://www.youtube.com/user/NIKE" target="_blank"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
