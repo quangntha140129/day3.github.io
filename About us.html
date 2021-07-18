@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"> </script>
+
+  <script type="text/javascript">
+    $(window).on('scroll',
+      function () {
+        if ($(window).scrollTop()) { $('nav').addClass('black'); }
+        else { $('nav').removeClass('black'); }
+      })
+  </script>
+
+  <title>
+    Read Nike's Mission Statement and find information about NIKE, Inc. innovation, sustainability, community impact and
+    more
+  </title>
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0px;
+      z-index: 10000;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 15px 0 15px 0;
+      background: transparent;
+    }
+
+    nav ul {
+      list-style: none;
+      overflow: hidden;
+      padding: 0;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 0px;
+      transition: 0.5s;
+    }
+
+    nav ul li {
+      display: inline-block;
+      padding: 8px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 10pt;
+      font-weight: bolder;
+      color: transparent;
+    }
+
+    nav ul li a:hover {
+      text-decoration: none;
+      color: #151516;
+    }
+
+    .underline:after {
+      display: block;
+      content: '';
+      background-color: #151516;
+      height: 2px;
+      width: 0;
+      left: 0;
+      margin-bottom: 0px;
+      transition: 0.3s;
+    }
+
+    .underline:hover:after {
+      width: 100%;
+    }
+
+    nav ul li a:hover {
+      color: transparent;
+    }
+
+    .underline:hover:after {
+      width: 0%;
+    }
+
+    nav.black .underline:hover:after {
+      width: 100%;
+    }
+
+    nav.black {
+      position: fixed;
+      height: 72px;
+      top: 0px;
+      z-index: 10000;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 15px 0 15px 0;
+      background: white;
+    }
+
+    nav .logo img {
+      display: block;
+      position: relative;
+      margin-left: 48.5%;
+      width: 72px;
+      filter: invert(1);
+      transition: 0.3s;
+    }
+
+    nav.black .logo img {
+      display: block;
+      position: relative;
+      margin-left: 20px;
+      margin-top: 7px;
+      width: 72px;
+      filter: invert(0);
+      transition: 0.3s;
+    }
+
+    nav.black ul {
+      list-style: none;
+      overflow: hidden;
+      padding: 0;
+      text-align: center;
+      margin-top: -32.5px;
+      margin-bottom: 0px;
+      transition: 0.5s;
+    }
+
+    nav.black ul li a {
+      text-decoration: none;
+      font-size: 10pt;
+      font-weight: bolder;
+      color: #151516;
+    }
+
+    .bgimgtext img {
+      background-size: cover;
+      min-width: 100%;
+      max-height: 100vh;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .bgimgtext video {
+      /* padding-top: 100px; */
+      background-size: cover;
+      min-width: 100%;
+      max-height: 100vh;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .carousel-inner img {
+
+      /* background-size: cover; */
+      width: 100%;
+      max-height: 100vh;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .Big-heading {
+      text-transform: uppercase;
+      font-weight: 1000;
+      font-size: 7vw;
+      letter-spacing: -3pt;
+      margin-bottom: 1.5vw;
+    }
+
+    .h3,
+    h3 {
+      text-transform: uppercase;
+      color: #ffffff;
+      font-size: 1.5vw;
+      font-weight: 1000;
+      margin-bottom: 1.5vw;
+    }
+
+    .h4,
+    h4 {
+      width: 50%;
+      color: #49494d;
+      text-align: center;
+      font-size: 13pt;
+      font-weight: 500;
+      line-height: 22pt;
+      margin-bottom: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      right: 15%;
+      left: 15%;
+      bottom: 20px;
+      max-height: 100vh;
+      z-index: 10;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      top: 43%;
+      transform: translateY(-67%);
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .btn-success {
+      color: #151516;
+      background-color: rgba(255, 255, 255, 0);
+      border-color: #151516;
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      height: calc(1.5em + .75rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #bbb6b6;
+      background-color: #f3f3f3;
+      background-clip: padding-box;
+      border: 1px solid #c6c8ca;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    .container {
+      padding: 0 auto 0 auto;
+      margin: 0 0 0 0;
+      max-width: 100%;
+    }
+
+    .container::after,
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .row {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .col {
+      padding: 0 0 0 0;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    .Title {
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 1000;
+      font-size: 32pt;
+      margin-top: 200px;
+      margin-bottom: 20px;
+      color: #151516;
+    }
+
+    .Small-title {
+      /* position: absolute; */
+      width: 100%;
+      font-weight: 700;
+      font-size: 18pt;
+      line-height: 120%;
+      /* letter-spacing: 2pt; */
+      text-transform: uppercase;
+      /* margin-top: 25px; */
+      margin-bottom: 20px;
+      color: #151516;
+    }
+
+    .tagline {
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 10pt;
+      letter-spacing: 2pt;
+      margin-top: -3px;
+      /* margin-bottom: 15px; */
+      color: #a5a8aa;
+    }
+
+    .price {
+      /* text-align: right; */
+      font-weight: 700;
+      font-size: 14pt;
+    }
+
+    .Image-list img {
+      width: 100%;
+      height: 500px;
+      margin-bottom: 25px;
+      align-items: center;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .Image-list2 img {
+      width: 100%;
+      height: 300px;
+      align-items: center;
+      object-fit: cover;
+      object-position: center top;
+      margin-bottom: 25px;
+      border-radius: 28px 28px 0px 0px;
+    }
+
+    .Text-block {
+      display: block;
+      width: 100%;
+      font-size: 12pt;
+      color: #626466;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    .column {
+      float: left;
+      width: 33.33%;
+      margin-bottom: 16px;
+      padding: 0 5px;
+    }
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .card {
+      /* border-width: 1pt; */
+      border-color: rgb(174, 176, 179);
+      border-radius: 28px;
+    }
+
+    .button {
+      border-width: 1pt;
+      border-radius: 18px;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      cursor: pointer;
+      color: #151516;
+      background-color: white;
+      text-transform: uppercase;
+      letter-spacing: 2pt;
+      font-size: 10pt;
+      font-weight: 500;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: #151516;
+      color: white;
+    }
+
+    .h2 {
+      font-size: 20pt;
+      font-weight: 700;
+      color: #151516;
+    }
+
+    .container1 {
+      /* border: 2px solid #ccc; */
+      /* background-color: #eee; */
+      border-radius: 5px;
+      padding: 16px;
+      margin: 16px 0;
+      text-align: center;
+    }
+
+    /* .container1::after {
+      content: "";
+      clear: both;
+      display: table;
+      } */
+
+    .container1 img {
+      width: 200px !important;
+      height: 200px;
+      object-fit: cover;
+      object-position: center top;
+      margin-bottom: 25px;
+      border-radius: 50%;
+    }
+
+    /* Footer */
+
+    .footer {
+      box-sizing: border-box;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #151516;
+      color: white;
+      /* text-align: center; */
+      margin-top: 200px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .footer ul {
+      margin-top: 30px;
+      list-style: none;
+      padding: 0px;
+    }
+
+    .footer-col {
+      width: 15%;
+    }
+
+    footer-h {
+      text-transform: uppercase;
+      font-size: 10pt;
+      font-weight: 700;
+      position: relative;
+    }
+
+    footer-h::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: white;
+      height: 2px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 2px;
+    }
+
+    .footer-col ul li {
+      height: 25px;
+    }
+
+    .footer-col ul li a {
+      display: block;
+      font-size: 10pt;
+      color: #a5a8aa;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-col ul li a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+
+    /* Social */
+
+    .footer-col .social-link {
+      margin-left: -5px;
+    }
+
+    .footer-col .social-link a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      color: #151516;
+      background-color: #a5a8aa;
+      margin: 30px 5px 0 5px;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    .footer-col .social-link a:hover {
+      background-color: white;
+    }
+
+    .icon-bar a:hover {
+      background-color: #151516;
+    }
+
+    .content {
+      margin-left: 75px;
+      font-size: 30px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Load font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- Navigation Bar -->
+  <nav>
+
+    <!-- Brand/logo -->
+    <a class="logo" href="index.html">
+      <img src="images/Logo_NIKE.svg">
+    </a>
+
+    <!-- Links -->
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="New Releases.html" class="underline">New Releases</a>
+        </li>
+        <li>
+          <a href="Jordan Sport.html" class="underline">Jordan Sport</a>
+        </li>
+        <li>
+          <a href="Men.html" class="underline">Men</a>
+        </li>
+        <li>
+          <a href="Women.html" class="underline">Women</a>
+        </li>
+        <li>
+          <a href="Kids.html" class="underline">Kids</a>
+        </li>
+        <li>
+          <a href="About us.html" class="underline">About us</a>
+        </li>
+      </ul>
+
+      <!-- Input search form -->
+      <!-- <form class="form-inline" action="/action_page.php">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-success" type="submit">Search</button>
+      </form> -->
+
+  </nav>
+
+  <!-- Background -->
+  <div class="bgimgtext">
+    <div class="carousel-caption">
+      <h3>
+        our mission
+      </h3>
+      <h1 class="Big-heading">BRING INSPIRATION AND INNOVATION TO EVERY ATHLETE* IN THE WORLD</h1>
+      <h3>
+        *IF YOU HAVE A BODY, YOU ARE AN ATHLETE.
+      </h3>
+    </div>
+    <video src="videos/about nike.mp4" muted loop autoplay>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="Title">
+          Our purpose
+        </div>
+        <div style="margin-bottom: 225px;">
+          <h4>
+            Our mission is what drives us to do everything possible to expand human potential. We do that by creating
+            groundbreaking sport innovations, by making our products more sustainably, by building a creative and
+            diverse global team and by making a positive impact in communities where we live and work.
+            <br>
+            <br>
+            Based in Beaverton, Oregon, NIKE, Inc. includes the Nike, Converse, and Jordan brands.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="width: 60%; margin-left: auto; margin-right: auto;">
+    <div class="row">
+      <div class="col">
+        <div class="Image-list">
+          <img src="https://s3.amazonaws.com/nikeinc/assets/82532/Nike-Eliud-About-Innovation_original.jpg?1538691590">
+        </div>
+        <div class="tagline">
+          innovation
+        </div>
+        <div class="Small-title">
+          We Dare To Design The Future Of Sport
+        </div>
+        <div class="Text-block">
+          To make big leaps, we take big risks. <span style="text-decoration: underline;">Learn more</span> about Nike's
+          innovation team, platforms and partnerships.
+        </div>
+      </div>
+      <div class="col">
+        <div class="Image-list">
+          <img src="https://s3.amazonaws.com/nikeinc/assets/82826/About-Nike-Team_original.jpg?1540227734">
+        </div>
+        <div class="tagline">
+          our team
+        </div>
+        <div class="Small-title">
+          A Team That's Empowered, Diverse And Inclusive
+        </div>
+        <div class="Text-block">
+          A love of sport unites us. <span style="text-decoration: underline;">Learn more</span> about Nike's global
+          team.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Section 2 -->
+  <div style="margin-bottom: 100px;">
+    <div class="Title">
+      Our team
+    </div>
+  </div>
+
+  <div class="container" style="width: 999px; margin-left: auto; margin-right: auto;">
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="Image-list2">
+            <img src="https://s3.amazonaws.com/nikeinc/assets/34050/Square_Phil_Knight_square_600.jpg?1413412183">
+          </div>
+          <div class="container">
+            <h2 class="h2">Philip H. Knight</h2>
+            <p class="tagline">Chairman Emeritus</p>
+            <p class="Text-block">Phil Knight is Chairman Emeritus of NIKE, Inc. Mr. Knight is a co-founder of the
+              company, leading Nike from a small partnership founded on a handshake to the world’s largest footwear,
+              apparel and equipment company...</p>
+            <p style="font-weight: bold; text-decoration: underline;">philiphampsonknight@nike.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="Image-list2">
+            <img src="https://s3.amazonaws.com/nikeinc/assets/97695/Mark-Parker-Nike_square_600.jpg?1595966514">
+          </div>
+          <div class="container">
+            <h2 class="h2">Mark Parker</h2>
+            <p class="tagline">Executive Chairman</p>
+            <p class="Text-block">Mark Parker served as NIKE, Inc. Chairman, President & CEO for 14 years, Chairman for
+              four years, and continues to serve as Executive Chairman. Mark joined Nike in 1979 as one of the company’s
+              first footwear...</p>
+            <p style="font-weight: bold; text-decoration: underline;">markparker@nike.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="Image-list2">
+            <img src="https://s3.amazonaws.com/nikeinc/assets/93381/John_Donahoe_square_600.jpg?1578962899">
+          </div>
+          <div class="container">
+            <h2 class="h2">John Donahoe</h2>
+            <p class="tagline">President & Ceo</p>
+            <p class="Text-block">John Donahoe is President & CEO of NIKE, Inc. He will lead the continued growth of the
+              Nike Brand as well as Nike's global business portfolio, which includes Jordan Brand and Converse Inc.
+              Before joining Nike as CEO in...</p>
+            <p style="font-weight: bold; text-decoration: underline;">johnjosephdonahoe@nike.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+
+  <div style="margin-bottom: 50px;">
+    <div class="Title">
+      Testimonials
+    </div>
+  </div>
+
+  <div class="container1">
+    <img
+      src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+      alt="Avatar" style="width:90px">
+    <h2>
+      Chris Fox
+    </h2>
+    <div class="tagline">CEO at Mighty Schools</div>
+    <p
+      style="display: block; text-align: center; margin-bottom: 50px; margin-top: 25px; font-size: 20pt; color: rgb(46, 48, 49); width: 50%; margin-left: auto; margin-right: auto;">
+      "I was also lucky enough to read @Coding_Career early and I was thoroughly blown away! It’s the book I wish I had
+      when I started my dev career."</p>
+  </div>
+
+  <div class="container1">
+    <img
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60 alt="
+      Avatar" style="width:90px">
+    <h2>
+      Rebecca Flex
+    </h2>
+    <div class="tagline">CEO at Company</div>
+    <p
+      style="display: block; text-align: center; margin-bottom: 50px; margin-top: 25px; font-size: 20pt; color: rgb(46, 48, 49); width: 50%; margin-left: auto; margin-right: auto;">
+      "The links to high-value blog posts already make the book worth it, never mind the amazing insight and context
+      provided by Shawn. Must buy for #CodeNewbies looking to break in or senior engineers looking to grow!"</p>
+  </div>
+
+  <!-- Footer -->
+
+  <div class="footer">
+    <div class="container" style="padding: 0 10% 0 10%; margin: 0 0 0 0; max-width: 100%;">
+      <div class="row" style="margin-left: 0px; margin-right: 0px;">
+        <div class="footer-col">
+          <footer-h>
+            find a store
+          </footer-h>
+          <br>
+          <br>
+          <footer-h>
+            become a member
+          </footer-h>
+          <br>
+          <br>
+          <footer-h>
+            sign up for email
+          </footer-h>
+          <br>
+          <br>
+          <footer-h>
+            send us feedback
+          </footer-h>
+          <br>
+        </div>
+
+        <div class="footer-col">
+          <footer-h>
+            get help
+          </footer-h>
+          <ul>
+            <li> <a href="">Order Status</a> </li>
+            <li> <a href="">Delivery</a> </li>
+            <li> <a href="">Returns</a> </li>
+            <li> <a href="">Payment Options</a> </li>
+            <li> <a href="">Contact Us</a> </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <footer-h>
+            about nike
+          </footer-h>
+          <ul>
+            <li> <a href="">News</a> </li>
+            <li> <a href="">Careers</a> </li>
+            <li> <a href="">Investors</a> </li>
+            <li> <a href="">Sustainability</a> </li>
+          </ul>
+        </div>
+
+        <div class="footer-col" style="width: 30%; margin-left: auto;">
+          <footer-h>
+            Follow us
+          </footer-h>
+          <div class="social-link">
+            <a href="https://www.facebook.com/nike" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/nike" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="mailto:info@nike.com" target="_blank"><i class="fa fa-google"></i></a>
+            <a href="https://www.youtube.com/user/NIKE" target="_blank"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</html>
